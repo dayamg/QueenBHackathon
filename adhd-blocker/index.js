@@ -1,10 +1,12 @@
 import express from 'express'; 
 import bodyParser from 'body-parser';
 //import scrape from './scraper';
+import cors from 'cors';
 
 const app = express()
 const port = 3000;
 
+app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
